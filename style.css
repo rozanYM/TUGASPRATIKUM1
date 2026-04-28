@@ -1,0 +1,195 @@
+/* ===== RESET & GLOBAL ===== */
+/* Selector * memilih semua elemen. box-sizing: border-box mengatur ukuran border & padding masuk dalam width/height */
+/* margin: 0; padding: 0 menghapus spasi default browser. font-family set font ke 'Lexend' */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Background halaman warna abu-abu, text color abu-abu gelap */
+body {
+    background-color: #f0f2f5;
+    color: #2d3436;
+}
+
+/* ===== NAVIGASI / HEADER ===== */
+/* nav: display flex membuat items sejajar horizontal, justify-content: space-between pisahkan logo & menu ke ujung */
+/* padding: 20px 10% = atas-bawah 20px, kiri-kanan 10%. background gelap (#2d3436), text putih */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #2d3436;
+    color: white;
+}
+
+/* .logo span = warna text "Folio." dalam span menjadi cyan (#00cec9) untuk highlight */
+.logo span {
+    color: #00cec9;
+}
+
+/* nav ul: flex membuat menu items sejajar horizontal, list-style: none hapus bullet points */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* nav ul li: margin-left: 20px memberi jarak antar menu items ke kiri */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* nav ul li a: link warna putih, text-decoration: none hapus garis bawah, ukuran font kecil (0.9rem) */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* ===== CONTAINER & SECTIONS ===== */
+/* .container: max-width 1100px membatasi lebar konten, margin: 30px auto pusatkan, padding horizontal 20px */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* .hero-section: text-align center pusatkan text, padding 60px atas-bawah, background putih, sudut bulat 15px, margin bawah 30px */
+.hero-section {
+    text-align: center;
+    padding: 60px 0;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* h1 span: warna span dalam h1 jadi biru (#0984e3) untuk highlight nama */
+h1 span {
+    color: #0984e3;
+}
+
+/* ===== GRID LAYOUT & CARDS ===== */
+/* .grid-layout: display flex membuat layout fleksibel, gap 20px jarak antar items, flex-wrap: wrap items turun ke baris baru jika penuh */
+.grid-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* .card: background putih, padding 25px semua sisi, border-radius 12px sudut bulat, flex: 1 membuat equal width */
+/* min-width: 300px lebar minimum 300px, box-shadow bayangan lembut (0 10px 20px) dengan opacity 0.05 */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== FORM INPUTS ===== */
+/* .input-group: margin-bottom 15px memberi jarak antar group input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* label: display block membuat label ambil full width, margin-bawah 5px jarak dengan input, font-weight bold, ukuran kecil */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* input, select, textarea: width 100% ambil full width, padding 12px semua sisi, border 1px solid abu-abu, sudut bulat 8px */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+}
+
+/* ===== BUTTON ===== */
+/* button: width 100% ambil full width, padding 12px, background biru (#0984e3), text putih, border: none hapus border default */
+/* border-radius 8px sudut bulat, font-weight bold teks tebal, cursor: pointer ubah kursor saat hover */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* button:hover: ketika mouse di atas button, background berubah ke biru lebih gelap (#00a2c6) */
+button:hover {
+    background: #00a2c6;
+}
+
+/* ===== PESAN MASUK / INBOX ===== */
+/* .msg-item: border-bottom 1px garis tipis abu-abu (#eee) di bawah setiap pesan, padding 10px atas-bawah */
+/* margin-bottom 10px jarak antar pesan */
+.msg-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+/* .msg-item h4: nama pengirim warna biru (#0984e3), ukuran font 1rem (16px) */
+.msg-item h4 {
+    color: #0984e3;
+    font-size: 1rem;
+}
+
+/* .msg-item small: text perihal warna abu-abu (#636e72), display block ambil full width, margin-bawah 5px jarak dengan pesan */
+.msg-item small {
+    color: #636e72;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Gaya untuk item pesan yang berhasil masuk */
+.msg-item {
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.msg-item h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.msg-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+/* Warna default kartu jika tidak ada kategori yang cocok */
+.msg-item {
+    background-color: #ffffff;
+    border-left: 5px solid #ccc;
+}
+
+/* Tantangan 3: Warna berdasarkan subjek */
+.bg-proyek {
+    background-color: #e8f5e9 !important; /* Hijau Muda */
+    border-left: 5px solid #2e7d32 !important;
+}
+
+.bg-kolaborasi {
+    background-color: #fff3e0 !important; /* Oranye Muda */
+    border-left: 5px solid #ef6c00 !important;
+}
+
+.bg-tanya {
+    background-color: #e3f2fd !important; /* Biru Muda */
+    border-left: 5px solid #1565c0 !important;
+}

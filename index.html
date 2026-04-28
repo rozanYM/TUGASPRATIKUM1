@@ -1,0 +1,135 @@
+<!-- Deklarasi dokumen HTML5 - standar terbaru format HTML -->
+<!DOCTYPE html>
+
+<!-- Tag pembuka HTML dengan atribut lang="id" untuk bahasa Indonesia -->
+<html lang="id">
+
+<!-- Tag <head> berisi informasi halaman (tidak ditampilkan di layar) -->
+<head>
+    <!-- Mengatur karakter encoding UTF-8 untuk mendukung simbol & huruf internasional -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport untuk membuat website responsif di mobile, dengan zoom awal 1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul halaman yang muncul di tab browser -->
+    <title>My Professional Portfolio</title>
+
+    <!-- Menghubungkan file CSS eksternal untuk styling halaman -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Tag <body> berisi semua konten yang ditampilkan di layar -->
+<body>
+    <!-- Tag <header> untuk bagian kepala halaman (navigasi, logo, dll) -->
+    <header>
+        <!-- Tag <nav> untuk navigasi website -->
+        <nav>
+            <!-- Div logo dengan class "logo", teks Folio punya warna berbeda via <span> -->
+            <div class="logo">Porto<span>Folio.</span></div>
+
+            <!-- Daftar menu navigasi menggunakan <ul> (unordered list) -->
+            <ul>
+                <!-- Link navigasi ke section dengan id="profil" -->
+                <li><a href="#profil">Tentang</a></li>
+
+                <!-- Link navigasi ke section dengan id="kontak" -->
+                <li><a href="#kontak">Hubungi Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tag <main> berisi konten utama halaman -->
+    <main class="container">
+        <!-- Section hero (bagian pembuka) dengan id "profil" untuk anchor link -->
+        <section id="profilsaya" class="hero-section">
+            <!-- Div untuk menampung informasi profil -->
+            <div class="profile-info">
+                <!-- Heading h1 (judul besar), dengan <span> untuk highlight nama -->
+                <h1>Halo, Saya <span id="nama-pemilikkita">Mahasiswa TI</span></h1>
+
+                <!-- Paragraf deskripsi singkat tentang profesi -->
+                <p>Junior Web Developer & Designer. Berfokus pada pembangunan solusi digital yang inovatif.</p>
+            </div>
+        </section>
+
+        <!-- Div dengan class "grid-layout" untuk tata letak grid (2 kolom) -->
+        <div class="grid-layout">
+            <!-- Section card untuk form kontak dengan id="kontak" -->
+            <section id="kontak" class="card">
+                <!-- Heading h2 judul section -->
+                <h2>Kirim Pesan</h2>
+
+                <!-- Form untuk mengirim pesan dengan id "form-kontak" -->
+                <form id="form-kontak">
+                    <!-- Div input-group untuk grup input nama -->
+                    <div class="input-group">
+                        <!-- Label untuk field nama -->
+                        <label>Nama Pengirim:</label>
+
+
+                        <!-- Input text dengan id, placeholder, dan atribut required (wajib diisi) -->
+                        <input type="text" id="sender-name" placeholder="Nama Anda..." required>
+                        
+                    </div>
+
+                    <!-- Div input-group untuk grup select subjek -->
+                    <div class="input-group">
+                        <!-- Label untuk dropdown subject -->
+                        <label>Subjek Pesan:</label>
+
+                        <!-- Select dropdown dengan id "subject" dan required -->
+                        <select id="subjectdata" required>
+                            <!-- Option placeholder sebagai default (value kosong) -->
+                            <option value="">-- Pilih Perihal --</option>
+
+                            <!-- Option pilihan 1: Tawaran Proyek -->
+                            <option value="Tawaran Proyek">Tawaran Proyek</option>
+
+                            <!-- Option pilihan 2: Kolaborasi -->
+                            <option value="Kolaborasi">Kolaborasi</option>
+
+                            <!-- Option pilihan 3: Tanya-Jawab -->
+                            <option value="Tanya-Jawab">Tanya-Jawab</option>
+                        </select>
+                    </div>
+
+                    <!-- Div input-group untuk grup textarea pesan -->
+                    <div class="input-group">
+                        <!-- Label untuk text area -->
+                        <label>Pesan Anda:</label>
+
+                        <!-- Textarea untuk input pesan panjang, 4 baris tinggi, wajib diisi -->
+                        <textarea id="message" rows="4" placeholder="Tuliskan pesan..." required></textarea>
+                    </div>
+
+                    <!-- Tombol submit untuk mengirim form -->
+                    <button type="submit" id="btn-kirim">Kirim Sekarang</button>
+                </form>
+            </section>
+
+            <!-- Section card untuk menampilkan daftar pesan yang masuk -->
+            <section class="card">
+                <!-- Heading h2 untuk judul section inbox -->
+                <h2>Pesan Terkirim (Inbox)</h2>
+
+                <!-- Div dengan id "inbox-list" untuk menampung daftar pesan dinamis -->
+                <div id="inbox-list">
+                    <!-- Paragraf pesan kosong jika belum ada pesan masuk -->
+                    <p class="empty-msg">Belum ada pesan yang masuk.</p>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- Tag <footer> untuk bagian bawah halaman -->
+    <footer>
+        <!-- Paragraf copyright & keterangan halaman -->
+        <p>&copy; 2026 Digital Portfolio - Creative Tech</p>
+    </footer>
+    <!-- Menghubungkan file JavaScript eksternal untuk interaktivitas halaman -->
+<script src="main.js"></script>
+</body>
+<!-- Tag penutup HTML --->
+</html>
